@@ -1,0 +1,139 @@
+$line-color: var(--primary-color);
+$line-width: 15px;
+$line-radius: 50px;
+$event-padding: 25px;
+$image-size: 50px;
+$image-border: 5px;
+$image-offset: ($image-border + $image-size + $image-border)/2 + $event-padding + $line-width/2;
+
+.timeline-start {
+    width: 25%;
+    height: 75px;
+    margin-left: 25%;
+    border-right: $line-width solid $line-color;
+    border-bottom: $line-width solid $line-color;
+    border-bottom-right-radius: $line-radius;
+}
+
+.timeline-end {
+    clear: both;
+}
+
+.timeline-event {
+    padding-left: $event-padding;
+    padding-right: $event-padding;
+    border-color: $line-color;
+    border-style: solid;
+    border-width: 0;
+    clear: both;
+}
+
+.timeline-event:nth-child(even) {
+    border-left-width: $line-width;
+}
+
+.timeline-event:nth-child(odd) {
+    border-right-width: $line-width;
+    text-align: right;
+}
+
+.timeline-event-start {
+    border-width: 0;
+    border-style: solid;
+    border-color: $line-color;
+    margin-top: -$line-width;
+    height: 50px;
+}
+
+.timeline-event-start:first-child {
+    border-top-width: $line-width;
+    border-left-width: $line-width;
+    border-top-left-radius: $line-radius;
+    width: 25%;
+}
+
+.timeline-event-start:nth-child(2n+3) {
+    border-top-width: $line-width;
+    border-left-width: $line-width;
+    border-top-left-radius: $line-radius;
+    width: 50%;
+    float: left;
+}
+
+.timeline-event-start:nth-child(even) {
+    border-top-width: $line-width;
+    border-right-width: $line-width;
+    border-top-right-radius: $line-radius;
+    width: 50%;
+    float: right;
+}
+
+.timeline-event-end {
+    border-width: 0;
+    border-style: solid;
+    border-color: $line-color;
+    height: 50px;
+}
+
+.timeline-event-end:nth-child(odd) {
+    border-left-width: $line-width;
+    border-bottom-width: $line-width;
+    border-bottom-left-radius: $line-radius;
+    width: 50%;
+}
+
+.timeline-event-end:nth-child(even) {
+    border-right-width: $line-width;
+    border-bottom-width: $line-width;
+    border-bottom-right-radius: $line-radius;
+    width: 50%;
+    float: right;
+}
+
+.timeline-image {
+    height: $image-size;
+    width: $image-size;
+    position: relative;
+    border-radius: $line-radius;
+    border: $image-border solid $line-color;
+    background-color: white;
+}
+
+.timeline-event:nth-child(even) .timeline-image {
+    float: left;
+    left: -$image-offset;
+}
+
+.timeline-event:nth-child(odd) .timeline-image {
+    float: right;
+    left: $image-offset;
+}
+
+.timeline-date {
+    height: $image-size + 2 * $image-border;
+    position: relative;
+    display: grid;
+    align-items: center;
+}
+
+.timeline-event:nth-child(even) .timeline-date {
+    left: -$image-offset + $image-border;
+}
+
+.timeline-event:nth-child(odd) .timeline-date {
+    left: $image-offset - $image-border;
+}
+
+// // .timeline-event:nth-child(odd) .timeline-date {
+// //     left: -$image-offset;
+// // }
+
+// .timeline-name {
+//     height: $image-size / 2 + $image-border;
+//     position: relative;
+//     left: $image-offset;
+// }
+
+.timeline-text {
+    clear: both;
+}
