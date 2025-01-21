@@ -1,16 +1,22 @@
+$line-color: var(--primary-color);
+
 .timeline-start {
-    width: 24%;
+    width: 25%;
     height: 75px;
     margin-left: 25%;
-    border-right: 15px solid var(--primary-color);
-    border-bottom: 15px solid var(--primary-color);
+    border-right: 15px solid $line-color;
+    border-bottom: 15px solid $line-color;
     border-bottom-right-radius: 50px;
+}
+
+.timeline-end {
+    clear: both;
 }
 
 .timeline-event {
     padding-left: 25px;
     padding-right: 25px;
-    border-color: var(--primary-color);
+    border-color: $line-color;
     border-style: solid;
     border-width: 0;
     clear: both;
@@ -22,12 +28,13 @@
 
 .timeline-event:nth-child(odd) {
     border-right-width: 15px;
+    text-align: right;
 }
 
 .timeline-event-start {
     border-width: 0;
     border-style: solid;
-    border-color: var(--primary-color);
+    border-color: $line-color;
     margin-top: -15px;
     height: 50px;
 }
@@ -58,7 +65,7 @@
 .timeline-event-end {
     border-width: 0;
     border-style: solid;
-    border-color: var(--primary-color);
+    border-color: $line-color;
     height: 50px;
 }
 
@@ -77,6 +84,22 @@
     float: right;
 }
 
-.timeline-date:nth-child(even) {
-    text-align: right;
+.timeline-image {
+    height: 50px;
+    width: 50px;
+    background-color: magenta;
+    position: relative;
+    border-radius: 30px;
+    border: 5px solid $line-color;
+    background-color: white;
+}
+
+.timeline-event:nth-child(even) .timeline-image {
+    float: left;
+    // left: -62px;
+}
+
+.timeline-event:nth-child(odd) .timeline-image {
+    float: right;
+    left: 62px;
 }
