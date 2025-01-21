@@ -1,0 +1,49 @@
+// .timeline-start .timeline-start-filler {
+//     width: 25%;
+//     height: 50px;
+//     background-color:red;
+//     // float: left;
+
+// }
+
+// .timeline-start .timeline-start-line {
+//     width: 50%;
+//     height: 50px;
+//     border-right: 5px solid black;
+//     border-bottom: 5px solid black;
+//     border-bottom-right-radius: 30px;
+// }
+
+.timeline-start {
+    width: 24%;
+    height: 75px;
+    margin-left: 25%;
+    border-right: 15px solid var(--primary-color);
+    border-bottom: 15px solid var(--primary-color);
+    border-bottom-right-radius: 50px;
+}
+
+.timeline-event {
+    padding: 25px;
+}
+
+.timeline-event:first-child {
+    margin-top: -15px;
+    margin-right: 74%;
+    border-left: 15px solid var(--primary-color);
+    border-top: 15px solid var(--primary-color);
+    border-top-left-radius: 50px;
+    text-wrap: nowrap;
+}
+
+.timeline-event .timeline-text {
+    color: red;
+    width: 100%;
+    text-wrap: wrap;
+}
+// .timeline-event:nth-child(even) {
+//     border-left: 15px solid var(--primary-color);
+//     border-top: 15px solid var(--primary-color);
+//     margin-top: -15px;
+
+// }
