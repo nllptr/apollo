@@ -1,0 +1,10 @@
+{% set data = load_data(path="timelines.yaml", format="yaml") %}
+{% set events = data[timeline] %}
+<div>
+    {% for event in events %}
+    <div>
+    {{ event.date }}
+    {{ event.name }}
+    </div>
+    {% endfor %}
+</div>
