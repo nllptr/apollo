@@ -108,3 +108,32 @@ $image-offset: ($image-border + $image-size + $image-border)/2 + $event-padding 
     float: right;
     left: $image-offset;
 }
+
+.timeline-date {
+    height: $image-size + 2 * $image-border;
+    position: relative;
+    display: grid;
+    align-items: center;
+}
+
+.timeline-event:nth-child(even) .timeline-date {
+    left: -$image-offset + $image-border;
+}
+
+.timeline-event:nth-child(odd) .timeline-date {
+    left: $image-offset - $image-border;
+}
+
+// // .timeline-event:nth-child(odd) .timeline-date {
+// //     left: -$image-offset;
+// // }
+
+// .timeline-name {
+//     height: $image-size / 2 + $image-border;
+//     position: relative;
+//     left: $image-offset;
+// }
+
+.timeline-text {
+    clear: both;
+}
